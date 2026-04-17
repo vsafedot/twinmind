@@ -115,3 +115,5 @@ Click the download icon (top-right of Transcript column). Exports a JSON file wi
 - **No VAD (Voice Activity Detection)**: silences still generate 30s chunks. Whisper handles this gracefully (returns empty or short strings), which we filter client-side (`blob.size < 1000`). A VAD library like `@ricky0123/vad-web` would be the production upgrade.
 - **Client-side audio only**: no server-side recording — simpler architecture, works entirely in-browser
 - **localStorage for settings**: sufficient for a single-user tool with no login requirement. A backend session would be needed for multi-tab or mobile sync.
+
+# twinmind
