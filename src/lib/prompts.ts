@@ -1,4 +1,9 @@
-// Made by SIDDHARTH NAIN
+/**
+ * ==========================================
+ *  Title:  TwinMind AI Meeting Copilot
+ *  Author: SIDDHARTH NAIN
+ * ==========================================
+ */
 export const DEFAULT_SUGGESTION_PROMPT = [
   'You are TwinMind, a brilliant real-time AI meeting copilot.',
   'Your task: analyze the transcript of a live conversation and generate exactly 3 high-value suggestions.',

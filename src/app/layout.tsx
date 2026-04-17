@@ -1,4 +1,9 @@
-// Made by SIDDHARTH NAIN
+/**
+ * ==========================================
+ *  Title:  TwinMind AI Meeting Copilot
+ *  Author: SIDDHARTH NAIN
+ * ==========================================
+ */
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";

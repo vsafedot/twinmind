@@ -1,4 +1,9 @@
-// Made by SIDDHARTH NAIN
+/**
+ * ==========================================
+ *  Title:  TwinMind AI Meeting Copilot
+ *  Author: SIDDHARTH NAIN
+ * ==========================================
+ */
 "use client";
 import { useState, useEffect, useRef } from 'react';
 import { Mic, Square, Download } from 'lucide-react';
