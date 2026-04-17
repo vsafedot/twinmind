@@ -116,4 +116,3 @@ Click the download icon (top-right of Transcript column). Exports a JSON file wi
 - **Client-side audio only**: no server-side recording — simpler architecture, works entirely in-browser
 - **localStorage for settings**: sufficient for a single-user tool with no login requirement. A backend session would be needed for multi-tab or mobile sync.
 
-# twinmind
