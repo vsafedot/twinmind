@@ -1,0 +1,110 @@
+/* Made by SIDDHARTH NAIN */
+@import "tailwindcss";
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 transparent;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+body {
+  background-color: #09090b;
+  color: #f4f4f5;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base custom utility styles for the flat design */
+.panel {
+  @apply bg-[#18181b] border border-[#27272a] rounded-xl shadow-sm overflow-hidden;
+}
+
+.panel-header {
+  @apply px-5 py-3.5 bg-[#09090b]/50 border-b border-[#27272a] flex items-center justify-between shrink-0;
+}
+
+.panel-body {
+  @apply flex-1 overflow-y-auto px-5 py-4;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer border border-transparent;
+}
+
+.btn-secondary {
+  @apply bg-[#27272a] hover:bg-[#3f3f46] text-zinc-200 font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer border border-[#3f3f46];
+}
+
+.input-flat {
+  @apply bg-[#09090b] border border-[#3f3f46] focus:border-blue-500 focus:ring-1 focus:ring-blue-500/50 rounded-lg text-zinc-100 placeholder-zinc-500 outline-none transition-all;
+}
+
+/* Animations */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.pulse-ring-active {
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer-loading {
+  position: relative;
+  overflow: hidden;
+  background-color: #27272a;
+}
+.shimmer-loading::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes typingDot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin: 0 2px;
+}
+.typing-dot:nth-child(1) { animation: typingDot 1.4s infinite ease-in-out; }
+.typing-dot:nth-child(2) { animation: typingDot 1.4s infinite ease-in-out 0.2s; }
+.typing-dot:nth-child(3) { animation: typingDot 1.4s infinite ease-in-out 0.4s; }
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Badges */
+.badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider;
+}
+.badge-question { @apply bg-indigo-500/10 text-indigo-400 border border-indigo-500/20; }
+.badge-talking-point { @apply bg-green-500/10 text-green-400 border border-green-500/20; }
+.badge-answer { @apply bg-blue-500/10 text-blue-400 border border-blue-500/20; }
+.badge-fact-check { @apply bg-amber-500/10 text-amber-400 border border-amber-500/20; }
+.badge-clarification { @apply bg-purple-500/10 text-purple-400 border border-purple-500/20; }
+.badge-default { @apply bg-zinc-500/10 text-zinc-400 border border-zinc-500/20; }
